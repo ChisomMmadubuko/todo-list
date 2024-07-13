@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List 2022 with LocalStorage</title>
+    <!-- CSS Import -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- End of CSS Import -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <!-- End of Fonts -->
+  </head>
+  <body>
+    <main class="app">
+      <section class="greeting">
+        <h2 class="title">
+          What's up
+          <input type="text" id="name" placeholder="Name here" class="type" />
+        </h2>
+      </section>
+      <section class="create-todo">
+        <h3>CREATE A TODO</h3>
+        <form id="new-todo-form">
+          What's up,
+          <input
+            type="text"
+            name="content"
+            id="content"
+            placeholder="e.g make a video"
+            required
+          />
+          <h4>Pick a category</h4>
+          <div class="options">
+            <label>
+              <input
+                type="radio"
+                name="category"
+                value="Business"
+                id="category1"
+                required
+              />
+              <div>Business</div>
+              <span class="bubble Business"></span>
+            </label>
+            <label>
+              <input
+                type="radio"
+                name="category"
+                value="personal"
+                id="category2"
+                required
+              />
+              <div>personal</div>
+              <span class="bubble personal"></span>
+            </label>
+          </div>
+          <button type="submit">Add Todo</button>
+        </form>
+      </section>
+      <section class="todo-list">
+        <h3>Todo List</h3>
+        <div class="list" id="todo-list"></div>
+        <div class="todo-itemm">
+          <label>
+            <input type="checkbox" />
+            <span class="bubble Business"></span>
+          </label>
+          <div class="todo content">
+            <input type="text" value=" make a video" readonly />
+          </div>
+          <div class="actions">
+            <button class="delete">Delete</button>
+            <button class="edit">Edit</button>
+          </div>
+          <div class="todo-itemm">
+            <label>
+              <input type="checkbox" />
+              <span class="bubble personal"></span>
+            </label>
+            <div class="todo content">
+              <input type="text" value=" Get Milk" readonly />
+            </div>
+            <div class="actions">
+              <button class="delete">Delete</button>
+              <button class="edit">Edit</button>
+            </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
